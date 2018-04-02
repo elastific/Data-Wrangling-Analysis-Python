@@ -1,0 +1,2169 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#">
+<!--<![endif]-->
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"761129145e","applicationID":"52245246","transactionName":"bwMDMRZSCxFWAkZYWVZJNBcNHD4hWBNCXkRZEgQ2DUcAPxgSW0VTWwkTAEtQCgxDBFxFGWgTEwwKUiQXRBVAUFpRB04tC14ATVgWXFhYX0sASABcAk1TDlUcVEoDBAFJXwwRQw==","queueTime":0,"applicationTime":399,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><meta name="viewport" content="width=device-width,initial-scale=1" /><title>
+	A-Z Dog Breeds List - Purina Australia
+</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="CODE_LANGUAGE" content="C#" /><meta name="vs_defaultClientScript" content="JavaScript" /><meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" /><meta id="key" name="Keywords" /><meta id="desc" name="Description" content="Dogs come in all shapes and sizes. Our dogs breed list includes profiles of all major breeds commonly available in Australia." /><meta http-equiv="PRAGMA" content="NO-CACHE" /><meta property="og:title" content="" /><meta property="og:description" content="" /><meta property="og:url" content="/owning-a-dog/dog-breed-list" /><link href="/assets/corporatesite/css/style_new.css?version=4" rel="stylesheet" type="text/css" />
+	<!--[if IE 8]>    <link href="/assets/corporatesite/css/style_ie9.css" rel="stylesheet" type="text/css" /> <![endif]-->
+	
+<meta name="VIcurrentDateTime" content="636582400140305141" />
+<script type="text/javascript" src="/layouts/system/VisitorIdentification.js"></script>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript">window.jQuery || document.write('<script src="/assets/corporatesite/scripts/libs/jquery.min.js"><\/script>')</script>
+	<script src="/assets/corporatesite/scripts/libs/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+	<script src="/assets/corporatesite/scripts/libs/jquery.ui.stars.js" type="text/javascript"></script>
+	<script src="/assets/corporatesite/scripts/purina.ajax.js" type="text/javascript"></script>
+	<script defer src="/assets/corporatesite/scripts/signup.js"></script>
+	
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WCB8LQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function (w, d, s, l, i) {
+w[l] = w[l] || []; w[l].push({
+'gtm.start':
+new Date().getTime(), event: 'gtm.js'
+}); var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-WCB8LQ');</script>
+<!-- End Google Tag Manager -->
+
+	<script type="application/ld+json">
+		{ "@context" : "http://schema.org",
+		  "@type" : "Organization",
+		  "name" : "Nestlé Purina Australia",
+		  "url" : "http://www.purina.com.au",
+		  "logo" : "http://www.purina.com.au/assets/corporatesite/images/purnia-logo.png",
+		  "sameAs" : [ "https://www.facebook.com/PurinaAustralia",
+			"https://twitter.com/purinaaustralia",
+			"https://plus.google.com/+PurinaAu",
+			"https://instagram.com/purinaaustralia",
+			"https://www.youtube.com/user/PurinaAustralia"]
+		}
+	</script>
+</head>
+<body id="bodyMain" class="bapo-dog">
+   
+ <style id="antiClickjack">body{display:none !important;}</style>
+    <script type="text/javascript">
+       if (self === top) {
+           var antiClickjack = document.getElementById("antiClickjack");
+           antiClickjack.parentNode.removeChild(antiClickjack);
+       } else {
+           top.location = self.location;
+       }
+    </script>
+<div id="catDogSelector" class="Unknown">
+<form method="post" action="/owning-a-dog/dog-breed-list" id="mainform">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['mainform'];
+if (!theForm) {
+    theForm = document.mainform;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZP6JyeFitkwV8KqA5gvmcvtQVNp8w_jOrlVFWZr6TrlMLNjjKvH27iEv1nhwzVC-8A2&amp;t=636355266046607314" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvq_nJ67b40PD5318pf6yrMNQ5mkRrKpp_xP8EhfXZJpwJ23KGBXTvp6BeZlBDRnIPE26auWbmsjeFcTnv5KefDF7XPkBGKBqiwx9s67mzAvcYBBxOPPeryKen6HBrxXpaQT2FcwLd-H6hy-Nd9cO0GY1&amp;t=3d6efc1f" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OBPCSREloPnHW5jTD0OrTr_zTwR1RdE0HYZqR9gw0PONcjc8pOjTHFuv6aSnmG3yzzqix691dLToQZgEtA_cZ3LHRTrTwHRGeZ2PpMVoPtGhrSpmT56qa0T22HFYMb8id0z3dp4jBlKqouMcyvU6n9c1&amp;t=3d6efc1f" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C215E99F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+</div>
+	<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('manager', 'mainform', ['tcontent_0$contentleft_0$udpBreedList','content_0_contentleft_0_udpBreedList','tsignupControl1$ctl00','signupControl1_ctl00'], [], [], 90, '');
+//]]>
+</script>
+
+	<div id="doc" class="mainContainer">
+		
+<div id="divTogglePopupMask"></div>
+<div id="divPopup" class="togglePopup">
+    <div id="divModal" class="toggleAnimals">
+         <p>Show me more about: </p>
+        <a id="modalToggle_cmdDog" class="dogs" href="javascript:__doPostBack(&#39;modalToggle$cmdDog&#39;,&#39;&#39;)"></a>
+        <a id="modalToggle_cmdCat" class="cats" href="javascript:__doPostBack(&#39;modalToggle$cmdCat&#39;,&#39;&#39;)"></a><br /><br /><br /><br />
+        <p style="font-family: Arial; font-size: 11px; color: Black; margin-top: 15px; margin-bottom: 15px; display: block; padding: 0 20px 0 20px;">This helps us show you the most relevant information for your pet. You can change your preference at any time using the buttons at the top of the page.</p>
+    </div>
+</div>
+
+		<div id="bannerContainer">
+    <div class="logo">
+        <a href="/" id="header_aHome" title="Purina"></a>
+    </div>
+
+    <div id="header_nomi" class="chatSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;header_cmdSearch&#39;)">
+	
+        <img id="liveagent_button_online_573b0000000blKR" class="chatLive" style="display: none;"  onclick="liveagent.startChat('573b0000000blKR');" src="/assets/corporatesite/images/chat-live.png " /> 
+        <img id="liveagent_button_offline_573b0000000blKR" class="chatLive" style="display: inline-block;"  src="/assets/corporatesite/images/chat-offline.png" />
+        <script type="text/javascript">
+            if (!window._laq) { window._laq = []; }
+            window._laq.push(function(){
+                liveagent.showWhenOnline('573b0000000blKR', document.getElementById('liveagent_button_online_573b0000000blKR'));
+                liveagent.showWhenOffline('573b0000000blKR', document.getElementById('liveagent_button_offline_573b0000000blKR'));
+            });
+        </script>
+        <fieldset class="search">
+            <input name="header$txtSearch" type="text" maxlength="200" id="header_txtSearch" class="box" value="Search" onfocus="this.value=&#39;&#39;;" />
+            <input type="submit" name="header$cmdSearch" value="" id="header_cmdSearch" class="btn" />
+        </fieldset>
+    
+</div>
+    <div class="topNavigation clearfix">
+        <ul>
+            
+                    <li id="header_rptMenu_liMenu_0" class="selected"><a href="/owning-a-dog" id="header_rptMenu_aMenu_0" class="first active">BECOME A PET OWNER</a></li>
+                
+                    <li id="header_rptMenu_liMenu_1"><a href="/puppies" id="header_rptMenu_aMenu_1">PUPPIES & KITTENS</a></li>
+                
+                    <li id="header_rptMenu_liMenu_2"><a href="/dogs" id="header_rptMenu_aMenu_2">PETCARE</a></li>
+                
+                    <li id="header_rptMenu_liMenu_3"><a href="/dog-food" id="header_rptMenu_aMenu_3">FEEDING</a></li>
+                
+                    <li id="header_rptMenu_liMenu_4"><a href="/promotions" id="header_rptMenu_aMenu_4">PROMOTIONS</a></li>
+                
+                    <li id="header_rptMenu_liMenu_5"><a href="/brands" id="header_rptMenu_aMenu_5">OUR BRANDS</a></li>
+                
+                    <li id="header_rptMenu_liMenu_6"><a href="/about-us" id="header_rptMenu_aMenu_6">ABOUT US</a></li>
+                
+        </ul>
+    </div>
+    <div class="toggleAnimals">
+        <p>
+            Show me more about:
+        </p>
+        <div>
+            <a id="header_cmdDog" class="dogs" href="javascript:__doPostBack(&#39;header$cmdDog&#39;,&#39;&#39;)"></a>
+        </div>
+        <div>
+            <a id="header_cmdCat" class="cats" href="javascript:__doPostBack(&#39;header$cmdCat&#39;,&#39;&#39;)"></a>
+        </div>
+    </div>
+    <div id="divBanner" class="banner">
+        <div class="breadcrumb clearfix">
+            <ul>
+                <li><a class="home" href="/home"></a></li>
+                
+                        <li><a href="/owning-a-dog" id="header_rptBreadcrumb_ancBreadcrumb_0">Become a Pet Owner</a></li>
+                    
+                <li id="header_currentBreadcrumb">A-Z Dog Breeds List</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+		<div id="content_0_content" class="content">
+    <div class="cTop">
+    </div>
+    <div class="contentMain">
+        
+
+<div id="selectBreed">
+    
+
+<ul class="menu">
+    <li id="content_0_contentleft_0_breedTabControl_breedSelectorLI"><a href="/owning-a-dog/breed-selector" id="content_0_contentleft_0_breedTabControl_ancBreedSelector" class="selected">Breed Selector</a></li>
+    <li id="content_0_contentleft_0_breedTabControl_breedLibraryLI"><a href="/owning-a-dog/dog-breeds" id="content_0_contentleft_0_breedTabControl_ancBreedLibrary">Breed Library</a></li>
+    <li id="content_0_contentleft_0_breedTabControl_breedListLI" class="current"><a id="content_0_contentleft_0_breedTabControl_ancBreedList">Breed List</a></li>
+    
+</ul>
+
+
+    <h1>A-Z Dog Breeds List</h1>
+    <p><p>From Great Dane to Greyhound, Afghan to Airedale, dogs come in all shapes and sizes, characters and temperaments. Our dog breed library includes profiles of all the major breeds commonly available, including a breed description, breed origins, feeding, grooming and ownership requirements, and typical personality traits. To learn more, and help choose your perfect canine companion, select from the alphabetical list and click on any of the breeds displayed.</p></p>
+
+    <div id="content_0_contentleft_0_udpBreedList">
+	
+        <div id="breedIndex">
+            <div class="top"></div>
+            <div class="inner">
+                <ul class="index">
+                    <li class="first"><a id="content_0_contentleft_0_ancA" href="javascript:__doPostBack(&#39;content_0$contentleft_0$ancA&#39;,&#39;&#39;)">A</a></li>
+                    <li><a id="content_0_contentleft_0_ancB" href="javascript:__doPostBack(&#39;content_0$contentleft_0$ancB&#39;,&#39;&#39;)">B</a></li>
+                    <li><a id="content_0_contentleft_0_ancC" href="javascript:__doPostBack(&#39;content_0$contentleft_0$ancC&#39;,&#39;&#39;)">C</a></li>
+                    <li><a id="content_0_contentleft_0_ancD" href="javascript:__doPostBack(&#39;content_0$contentleft_0$ancD&#39;,&#39;&#39;)">D</a></li>
+                    <li><a id="content_0_contentleft_0_ancEtoG" href="javascript:__doPostBack(&#39;content_0$contentleft_0$ancEtoG&#39;,&#39;&#39;)">E-G</a></li>
+                    <li><a id="content_0_contentleft_0_ancHtoK" href="javascript:__doPostBack(&#39;content_0$contentleft_0$ancHtoK&#39;,&#39;&#39;)">H-K</a></li>
+                    <li><a id="content_0_contentleft_0_ancLtoN" href="javascript:__doPostBack(&#39;content_0$contentleft_0$ancLtoN&#39;,&#39;&#39;)">L-N</a></li>
+                    <li><a id="content_0_contentleft_0_ancOtoP" href="javascript:__doPostBack(&#39;content_0$contentleft_0$ancOtoP&#39;,&#39;&#39;)">O-P</a></li>
+                    <li><a id="content_0_contentleft_0_ancQtoS" href="javascript:__doPostBack(&#39;content_0$contentleft_0$ancQtoS&#39;,&#39;&#39;)">Q-S</a></li>
+                    <li><a id="content_0_contentleft_0_ancTtoV" href="javascript:__doPostBack(&#39;content_0$contentleft_0$ancTtoV&#39;,&#39;&#39;)">T-V</a></li>
+                    <li><a id="content_0_contentleft_0_ancWtoZ" href="javascript:__doPostBack(&#39;content_0$contentleft_0$ancWtoZ&#39;,&#39;&#39;)">W-Z</a></li>
+                </ul>
+            </div>
+            <div class="bot"></div>
+        </div>
+
+        <div class="breedList">
+            
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_0_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Affenpinscher" id="content_0_contentleft_0_rptContent_rptBreeds_0_ancBreed_0">
+                                    Affenpinscher 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_0_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Afghan-Hound" id="content_0_contentleft_0_rptContent_rptBreeds_0_ancBreed_1">
+                                    Afghan Hound 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_0_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/Airedale-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_0_ancBreed_2">
+                                    Airedale Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_0_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Alaskan-Malamute" id="content_0_contentleft_0_rptContent_rptBreeds_0_ancBreed_3">
+                                    Alaskan Malamute 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_0_itemLI_4">
+                                <a href="/owning-a-dog/dog-breeds/American-Cocker-Spaniel" id="content_0_contentleft_0_rptContent_rptBreeds_0_ancBreed_4">
+                                    American Cocker Spaniel 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_0_itemLI_5">
+                                <a href="/owning-a-dog/dog-breeds/American-Staffordshire-Bull-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_0_ancBreed_5">
+                                    American Staffordshire Bull Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_0_itemLI_6">
+                                <a href="/owning-a-dog/dog-breeds/Anatolian-Shepherd" id="content_0_contentleft_0_rptContent_rptBreeds_0_ancBreed_6">
+                                    Anatolian Shepherd Dog 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_0_itemLI_7">
+                                <a href="/owning-a-dog/dog-breeds/Australian-Cattle" id="content_0_contentleft_0_rptContent_rptBreeds_0_ancBreed_7">
+                                    Australian Cattle Dog 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_0_itemLI_8">
+                                <a href="/owning-a-dog/dog-breeds/Australian-Kelpie" id="content_0_contentleft_0_rptContent_rptBreeds_0_ancBreed_8">
+                                    Australian Kelpie 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_0_itemLI_9">
+                                <a href="/owning-a-dog/dog-breeds/Australian-Shepherd" id="content_0_contentleft_0_rptContent_rptBreeds_0_ancBreed_9">
+                                    Australian Shepherd Dog 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_0_itemLI_10">
+                                <a href="/owning-a-dog/dog-breeds/Australian-Silky-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_0_ancBreed_10">
+                                    Australian Silky Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_0_itemLI_11">
+                                <a href="/owning-a-dog/dog-breeds/Australian-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_0_ancBreed_11">
+                                    Australian Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Basenji" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_0">
+                                    Basenji 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Basset-Fauve-de-Bretagne" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_1">
+                                    Basset Fauve de Bretagne 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/Basset-Hound" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_2">
+                                    Basset Hound 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Beagle" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_3">
+                                    Beagle 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_4">
+                                <a href="/owning-a-dog/dog-breeds/Bearded-Collie" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_4">
+                                    Bearded Collie 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_5">
+                                <a href="/owning-a-dog/dog-breeds/Bedlington-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_5">
+                                    Bedlington Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_6">
+                                <a href="/owning-a-dog/dog-breeds/Belgian-Shepherd-Dog-Groenendael" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_6">
+                                    Belgian Shepherd Groenendael 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_7">
+                                <a href="/owning-a-dog/dog-breeds/Belgian-Shepherd-Dog-Laekenois" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_7">
+                                    Belgian Shepherd Dog Laekenois 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_8">
+                                <a href="/owning-a-dog/dog-breeds/Belgian-Shepherd-Dog-Malinois" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_8">
+                                    Belgian Shepherd Dog Malinois 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_9">
+                                <a href="/owning-a-dog/dog-breeds/Belgian-Shepherd-Dog-Tervueren" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_9">
+                                    Belgian Shepherd Tervueren 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_10">
+                                <a href="/owning-a-dog/dog-breeds/Bernese-Mountain" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_10">
+                                    Bernese Mountain Dog 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_11">
+                                <a href="/owning-a-dog/dog-breeds/Bichon-Frise" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_11">
+                                    Bichon Frise 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_12">
+                                <a href="/owning-a-dog/dog-breeds/Bloodhound" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_12">
+                                    Bloodhound 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_13">
+                                <a href="/owning-a-dog/dog-breeds/Border-Collie" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_13">
+                                    Border Collie 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_14">
+                                <a href="/owning-a-dog/dog-breeds/Border-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_14">
+                                    Border Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_15">
+                                <a href="/owning-a-dog/dog-breeds/Borzoi" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_15">
+                                    Borzoi 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_16">
+                                <a href="/owning-a-dog/dog-breeds/Boston-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_16">
+                                    Boston Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_17">
+                                <a href="/owning-a-dog/dog-breeds/Bouvier-des-Flandres" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_17">
+                                    Bouvier des Flandres 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_18">
+                                <a href="/owning-a-dog/dog-breeds/Boxer" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_18">
+                                    Boxer Dog 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_19">
+                                <a href="/owning-a-dog/dog-breeds/Bracco-Italiano" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_19">
+                                    Bracco Italiano 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_20">
+                                <a href="/owning-a-dog/dog-breeds/Briard" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_20">
+                                    Briard 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_21">
+                                <a href="/owning-a-dog/dog-breeds/Brittany" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_21">
+                                    Brittany Dog 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_22">
+                                <a href="/owning-a-dog/dog-breeds/Bulldog" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_22">
+                                    Bulldogs 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_23">
+                                <a href="/owning-a-dog/dog-breeds/Bullmastiff" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_23">
+                                    Bullmastiff 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_1_itemLI_24">
+                                <a href="/owning-a-dog/dog-breeds/Bull-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_1_ancBreed_24">
+                                    Bull Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_2_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Cairn-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_2_ancBreed_0">
+                                    Cairn Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_2_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Cavalier-King-Charles-Spaniel" id="content_0_contentleft_0_rptContent_rptBreeds_2_ancBreed_1">
+                                    Cavalier King Charles Spaniel 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_2_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/Cavoodle" id="content_0_contentleft_0_rptContent_rptBreeds_2_ancBreed_2">
+                                    Cavoodle 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_2_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Cesky-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_2_ancBreed_3">
+                                    Cesky Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_2_itemLI_4">
+                                <a href="/owning-a-dog/dog-breeds/Chesapeake-Bay-Retriever" id="content_0_contentleft_0_rptContent_rptBreeds_2_ancBreed_4">
+                                    Chesapeake Bay Retriever 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_2_itemLI_5">
+                                <a href="/owning-a-dog/dog-breeds/Chihuahua-Smooth-Coat" id="content_0_contentleft_0_rptContent_rptBreeds_2_ancBreed_5">
+                                    Chihuahua (Smooth Coat) 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_2_itemLI_6">
+                                <a href="/owning-a-dog/dog-breeds/Chinese-Crested" id="content_0_contentleft_0_rptContent_rptBreeds_2_ancBreed_6">
+                                    Chinese Crested 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_2_itemLI_7">
+                                <a href="/owning-a-dog/dog-breeds/Chow-Chow" id="content_0_contentleft_0_rptContent_rptBreeds_2_ancBreed_7">
+                                    Chow Chow 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_2_itemLI_8">
+                                <a href="/owning-a-dog/dog-breeds/Chow-Chow-Smooth" id="content_0_contentleft_0_rptContent_rptBreeds_2_ancBreed_8">
+                                    Chow Chow (Smooth) 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_2_itemLI_9">
+                                <a href="/owning-a-dog/dog-breeds/Clumber-Spaniel" id="content_0_contentleft_0_rptContent_rptBreeds_2_ancBreed_9">
+                                    Clumber Spaniel 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_2_itemLI_10">
+                                <a href="/owning-a-dog/dog-breeds/Collie-Rough" id="content_0_contentleft_0_rptContent_rptBreeds_2_ancBreed_10">
+                                    Collie (Rough) 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_2_itemLI_11">
+                                <a href="/owning-a-dog/dog-breeds/Collie-Smooth" id="content_0_contentleft_0_rptContent_rptBreeds_2_ancBreed_11">
+                                    Collie (Smooth) 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_2_itemLI_12">
+                                <a href="/owning-a-dog/dog-breeds/Curly-Coated-Retriever" id="content_0_contentleft_0_rptContent_rptBreeds_2_ancBreed_12">
+                                    Curly-Coated Retriever 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_3_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Dachshund-Miniature-Long-Haired" id="content_0_contentleft_0_rptContent_rptBreeds_3_ancBreed_0">
+                                    Dachshund (Miniature Long Haired) 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_3_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Dachshund-Miniature-Smooth-Haired" id="content_0_contentleft_0_rptContent_rptBreeds_3_ancBreed_1">
+                                    Dachshund (Miniature Smooth) 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_3_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/Dachshund-Miniature-Wire-Haired" id="content_0_contentleft_0_rptContent_rptBreeds_3_ancBreed_2">
+                                    Dachshund (Miniature Wire Haired) 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_3_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Dachshund-Smooth-Haired" id="content_0_contentleft_0_rptContent_rptBreeds_3_ancBreed_3">
+                                    Dachshund (Smooth Haired) 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_3_itemLI_4">
+                                <a href="/owning-a-dog/dog-breeds/Dachshund-Wire-Haired" id="content_0_contentleft_0_rptContent_rptBreeds_3_ancBreed_4">
+                                    Dachshund (Wire Haired) 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_3_itemLI_5">
+                                <a href="/owning-a-dog/dog-breeds/Dalmatian" id="content_0_contentleft_0_rptContent_rptBreeds_3_ancBreed_5">
+                                    Dalmatian 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_3_itemLI_6">
+                                <a href="/owning-a-dog/dog-breeds/Dandie-Dinmont-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_3_ancBreed_6">
+                                    Dandie Dinmont Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_3_itemLI_7">
+                                <a href="/owning-a-dog/dog-breeds/Deerhound" id="content_0_contentleft_0_rptContent_rptBreeds_3_ancBreed_7">
+                                    Deerhound 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_3_itemLI_8">
+                                <a href="/owning-a-dog/dog-breeds/Dobermann" id="content_0_contentleft_0_rptContent_rptBreeds_3_ancBreed_8">
+                                    Dobermann Pinscher 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_3_itemLI_9">
+                                <a href="/owning-a-dog/dog-breeds/Dogue-de-Bordeaux" id="content_0_contentleft_0_rptContent_rptBreeds_3_ancBreed_9">
+                                    Dogue de Bordeaux 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_4_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/English-Cocker-Spaniel" id="content_0_contentleft_0_rptContent_rptBreeds_4_ancBreed_0">
+                                    English Cocker Spaniel 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_4_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/English-Setter" id="content_0_contentleft_0_rptContent_rptBreeds_4_ancBreed_1">
+                                    English Setter 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_4_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/English-Springer-Spaniel" id="content_0_contentleft_0_rptContent_rptBreeds_4_ancBreed_2">
+                                    English Springer Spaniel 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_4_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/English-Toy-Terrier-Black-Tan" id="content_0_contentleft_0_rptContent_rptBreeds_4_ancBreed_3">
+                                    English Toy Terrier (Black and Tan) 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_4_itemLI_4">
+                                <a href="/owning-a-dog/dog-breeds/Mastiff" id="content_0_contentleft_0_rptContent_rptBreeds_4_ancBreed_4">
+                                    English Mastiff 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_5_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Field-Spaniel" id="content_0_contentleft_0_rptContent_rptBreeds_5_ancBreed_0">
+                                    Field Spaniel 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_5_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Finnish-Lapphund" id="content_0_contentleft_0_rptContent_rptBreeds_5_ancBreed_1">
+                                    Finnish Lapphund 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_5_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/Finnish-Spitz" id="content_0_contentleft_0_rptContent_rptBreeds_5_ancBreed_2">
+                                    Finnish Spitz 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_5_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Flat-Coated-Retriever" id="content_0_contentleft_0_rptContent_rptBreeds_5_ancBreed_3">
+                                    Flat-Coated Retriever 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_5_itemLI_4">
+                                <a href="/owning-a-dog/dog-breeds/Foxhound" id="content_0_contentleft_0_rptContent_rptBreeds_5_ancBreed_4">
+                                    Foxhound 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_5_itemLI_5">
+                                <a href="/owning-a-dog/dog-breeds/Fox-Terrier-Smooth-Coat" id="content_0_contentleft_0_rptContent_rptBreeds_5_ancBreed_5">
+                                    Fox Terrier Smooth Coat 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_5_itemLI_6">
+                                <a href="/owning-a-dog/dog-breeds/Fox-Terrier-Wire-Coat" id="content_0_contentleft_0_rptContent_rptBreeds_5_ancBreed_6">
+                                    Fox Terrier Wire Coat 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_5_itemLI_7">
+                                <a href="/owning-a-dog/dog-breeds/French-Bulldog" id="content_0_contentleft_0_rptContent_rptBreeds_5_ancBreed_7">
+                                    French Bulldog 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_6_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/German-Shepherd" id="content_0_contentleft_0_rptContent_rptBreeds_6_ancBreed_0">
+                                    German Shepherd Dog 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_6_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/German-Short-Haired-Pointer" id="content_0_contentleft_0_rptContent_rptBreeds_6_ancBreed_1">
+                                    German Short-Haired Pointer 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_6_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/German-Spitz-Klein" id="content_0_contentleft_0_rptContent_rptBreeds_6_ancBreed_2">
+                                    German Spitz Klein 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_6_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/German-Wire-Haired-Pointer" id="content_0_contentleft_0_rptContent_rptBreeds_6_ancBreed_3">
+                                    German Wire-Haired Pointer 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_6_itemLI_4">
+                                <a href="/owning-a-dog/dog-breeds/Goldendoodle" id="content_0_contentleft_0_rptContent_rptBreeds_6_ancBreed_4">
+                                    Goldendoodle 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_6_itemLI_5">
+                                <a href="/owning-a-dog/dog-breeds/Golden-Retriever" id="content_0_contentleft_0_rptContent_rptBreeds_6_ancBreed_5">
+                                    Golden Retriever 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_6_itemLI_6">
+                                <a href="/owning-a-dog/dog-breeds/Gordon-Setter" id="content_0_contentleft_0_rptContent_rptBreeds_6_ancBreed_6">
+                                    Gordon Setter 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_6_itemLI_7">
+                                <a href="/owning-a-dog/dog-breeds/Great-Dane" id="content_0_contentleft_0_rptContent_rptBreeds_6_ancBreed_7">
+                                    Great Dane 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_6_itemLI_8">
+                                <a href="/owning-a-dog/dog-breeds/Great-Pyrenees" id="content_0_contentleft_0_rptContent_rptBreeds_6_ancBreed_8">
+                                    Great Pyrenees 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_6_itemLI_9">
+                                <a href="/owning-a-dog/dog-breeds/Greyhound" id="content_0_contentleft_0_rptContent_rptBreeds_6_ancBreed_9">
+                                    Greyhound Dogs 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_6_itemLI_10">
+                                <a href="/owning-a-dog/dog-breeds/Pyrenean-Mountain-Dog" id="content_0_contentleft_0_rptContent_rptBreeds_6_ancBreed_10">
+                                    Great Pyrenean Mountain Dog 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_7_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Harrier-Hound" id="content_0_contentleft_0_rptContent_rptBreeds_7_ancBreed_0">
+                                    Harrier Hound 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_7_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Havanese" id="content_0_contentleft_0_rptContent_rptBreeds_7_ancBreed_1">
+                                    Havanese 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_7_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/Hungarian-Puli" id="content_0_contentleft_0_rptContent_rptBreeds_7_ancBreed_2">
+                                    Hungarian Puli 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_7_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Hungarian-Vizsla" id="content_0_contentleft_0_rptContent_rptBreeds_7_ancBreed_3">
+                                    Hungarian Vizsla 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_7_itemLI_4">
+                                <a href="/owning-a-dog/dog-breeds/Hungarian-Wire-Haired-Vizsla" id="content_0_contentleft_0_rptContent_rptBreeds_7_ancBreed_4">
+                                    Hungarian Wire-Haired Vizsla 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_8_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Ibizan-Hound" id="content_0_contentleft_0_rptContent_rptBreeds_8_ancBreed_0">
+                                    Ibizan Hound 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_8_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Irish-Setter" id="content_0_contentleft_0_rptContent_rptBreeds_8_ancBreed_1">
+                                    Irish Setter 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_8_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/Irish-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_8_ancBreed_2">
+                                    Irish Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_8_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Irish-Water-Spaniel" id="content_0_contentleft_0_rptContent_rptBreeds_8_ancBreed_3">
+                                    Irish Water Spaniel 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_8_itemLI_4">
+                                <a href="/owning-a-dog/dog-breeds/Irish-Wolfhound" id="content_0_contentleft_0_rptContent_rptBreeds_8_ancBreed_4">
+                                    Irish Wolfhound 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_8_itemLI_5">
+                                <a href="/owning-a-dog/dog-breeds/Italian-Greyhound" id="content_0_contentleft_0_rptContent_rptBreeds_8_ancBreed_5">
+                                    Italian Greyhound 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_9_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Japanese-Akita" id="content_0_contentleft_0_rptContent_rptBreeds_9_ancBreed_0">
+                                    Japanese Akita 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_9_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Japanese-Chin" id="content_0_contentleft_0_rptContent_rptBreeds_9_ancBreed_1">
+                                    Japanese Chin 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_9_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/Japanese-Spitz" id="content_0_contentleft_0_rptContent_rptBreeds_9_ancBreed_2">
+                                    Japanese Spitz 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_9_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Jug" id="content_0_contentleft_0_rptContent_rptBreeds_9_ancBreed_3">
+                                    Jug 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_10_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Keeshond" id="content_0_contentleft_0_rptContent_rptBreeds_10_ancBreed_0">
+                                    Keeshond 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_10_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Kerry-Blue-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_10_ancBreed_1">
+                                    Kerry Blue Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_10_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/King-Charles-Spaniel" id="content_0_contentleft_0_rptContent_rptBreeds_10_ancBreed_2">
+                                    King Charles Spaniel 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_10_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Komondor" id="content_0_contentleft_0_rptContent_rptBreeds_10_ancBreed_3">
+                                    Komondor 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_11_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Labradoodle" id="content_0_contentleft_0_rptContent_rptBreeds_11_ancBreed_0">
+                                    Labradoodle 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_11_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Labrador-Retriever" id="content_0_contentleft_0_rptContent_rptBreeds_11_ancBreed_1">
+                                    Labrador Retriever 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_11_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/Lakeland-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_11_ancBreed_2">
+                                    Lakeland Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_11_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Leonberger" id="content_0_contentleft_0_rptContent_rptBreeds_11_ancBreed_3">
+                                    Leonberger 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_11_itemLI_4">
+                                <a href="/owning-a-dog/dog-breeds/Lhasa-Apso" id="content_0_contentleft_0_rptContent_rptBreeds_11_ancBreed_4">
+                                    Lhasa Apso 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_11_itemLI_5">
+                                <a href="/owning-a-dog/dog-breeds/Lowchen" id="content_0_contentleft_0_rptContent_rptBreeds_11_ancBreed_5">
+                                    Lowchen 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_12_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Bull-Terrier-Miniature" id="content_0_contentleft_0_rptContent_rptBreeds_12_ancBreed_0">
+                                    Miniature Bull Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_12_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Maltese" id="content_0_contentleft_0_rptContent_rptBreeds_12_ancBreed_1">
+                                    Maltese 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_12_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/Manchester-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_12_ancBreed_2">
+                                    Manchester Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_12_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Maremma-Sheepdog" id="content_0_contentleft_0_rptContent_rptBreeds_12_ancBreed_3">
+                                    Maremma Sheepdog 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_12_itemLI_4">
+                                <a href="/owning-a-dog/dog-breeds/Moodle" id="content_0_contentleft_0_rptContent_rptBreeds_12_ancBreed_4">
+                                    Moodle 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_13_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Neapolitan-Mastiff" id="content_0_contentleft_0_rptContent_rptBreeds_13_ancBreed_0">
+                                    Neapolitan Mastiff 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_13_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Newfoundland" id="content_0_contentleft_0_rptContent_rptBreeds_13_ancBreed_1">
+                                    Newfoundland 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_13_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/Norfolk-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_13_ancBreed_2">
+                                    Norfolk Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_13_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Norwich-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_13_ancBreed_3">
+                                    Norwich Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_13_itemLI_4">
+                                <a href="/owning-a-dog/dog-breeds/Nova-Scotia-Duck-Tolling-Retriever" id="content_0_contentleft_0_rptContent_rptBreeds_13_ancBreed_4">
+                                    Nova Scotia Duck Tolling Retriever 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_14_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Old-English-Sheepdog" id="content_0_contentleft_0_rptContent_rptBreeds_14_ancBreed_0">
+                                    Old English Sheepdog 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_15_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Papillon" id="content_0_contentleft_0_rptContent_rptBreeds_15_ancBreed_0">
+                                    Papillon 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_15_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Parson-Russell-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_15_ancBreed_1">
+                                    Parson Russell Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_15_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/Pharaoh-Hound" id="content_0_contentleft_0_rptContent_rptBreeds_15_ancBreed_2">
+                                    Pharaoh Hound 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_15_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Pinscher-Miniature" id="content_0_contentleft_0_rptContent_rptBreeds_15_ancBreed_3">
+                                    Pinscher-Miniature 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_15_itemLI_4">
+                                <a href="/owning-a-dog/dog-breeds/Pointer" id="content_0_contentleft_0_rptContent_rptBreeds_15_ancBreed_4">
+                                    Pointer Dog 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_15_itemLI_5">
+                                <a href="/owning-a-dog/dog-breeds/Pomeranian" id="content_0_contentleft_0_rptContent_rptBreeds_15_ancBreed_5">
+                                    Pomeranian 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_15_itemLI_6">
+                                <a href="/owning-a-dog/dog-breeds/Poodle-Miniature" id="content_0_contentleft_0_rptContent_rptBreeds_15_ancBreed_6">
+                                    Poodle Miniature 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_15_itemLI_7">
+                                <a href="/owning-a-dog/dog-breeds/Poodle-Standard" id="content_0_contentleft_0_rptContent_rptBreeds_15_ancBreed_7">
+                                    Poodle Standard 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_15_itemLI_8">
+                                <a href="/owning-a-dog/dog-breeds/Poodle-Toy" id="content_0_contentleft_0_rptContent_rptBreeds_15_ancBreed_8">
+                                    Poodle Toy 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_15_itemLI_9">
+                                <a href="/owning-a-dog/dog-breeds/Portuguese-Water-Dog" id="content_0_contentleft_0_rptContent_rptBreeds_15_ancBreed_9">
+                                    Portuguese Water Dog 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_15_itemLI_10">
+                                <a href="/owning-a-dog/dog-breeds/Pug" id="content_0_contentleft_0_rptContent_rptBreeds_15_ancBreed_10">
+                                    Pugs 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_15_itemLI_11">
+                                <a href="/owning-a-dog/dog-breeds/Pugalier" id="content_0_contentleft_0_rptContent_rptBreeds_15_ancBreed_11">
+                                    Pugalier 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_16_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Rhodesian-Ridgeback" id="content_0_contentleft_0_rptContent_rptBreeds_16_ancBreed_0">
+                                    Rhodesian Ridgeback 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_16_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Rottweiler" id="content_0_contentleft_0_rptContent_rptBreeds_16_ancBreed_1">
+                                    Rottweiler 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Saluki" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_0">
+                                    Saluki 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Samoyed" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_1">
+                                    Samoyed 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/Schipperke" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_2">
+                                    Schipperke 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Schnauzer-Giant" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_3">
+                                    Schnauzer Giant 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_4">
+                                <a href="/owning-a-dog/dog-breeds/Schnauzer-Miniature" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_4">
+                                    Schnauzer Miniature 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_5">
+                                <a href="/owning-a-dog/dog-breeds/Schnauzer-Standard" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_5">
+                                    Schnauzer Standard 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_6">
+                                <a href="/owning-a-dog/dog-breeds/Schnoodle" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_6">
+                                    Schnoodle 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_7">
+                                <a href="/owning-a-dog/dog-breeds/Scoodle" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_7">
+                                    Scoodle 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_8">
+                                <a href="/owning-a-dog/dog-breeds/Scottish-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_8">
+                                    Scottish Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_9">
+                                <a href="/owning-a-dog/dog-breeds/Shar-Pei" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_9">
+                                    Shar Pei 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_10">
+                                <a href="/owning-a-dog/dog-breeds/Shetland-Sheepdog" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_10">
+                                    Shetland Sheepdog 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_11">
+                                <a href="/owning-a-dog/dog-breeds/Shiba-Inu" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_11">
+                                    Shiba Inu 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_12">
+                                <a href="/owning-a-dog/dog-breeds/Shih-Tzu" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_12">
+                                    Shih Tzu 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_13">
+                                <a href="/owning-a-dog/dog-breeds/Siberian-Husky" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_13">
+                                    Siberian Husky 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_14">
+                                <a href="/owning-a-dog/dog-breeds/Skye-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_14">
+                                    Skye Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_15">
+                                <a href="/owning-a-dog/dog-breeds/Sloughi" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_15">
+                                    Sloughi 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_16">
+                                <a href="/owning-a-dog/dog-breeds/Soft-Coated-Wheaten-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_16">
+                                    Soft Coated Wheaten Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_17">
+                                <a href="/owning-a-dog/dog-breeds/Spoodle" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_17">
+                                    Spoodle 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_18">
+                                <a href="/owning-a-dog/dog-breeds/Staffordshire-Bull-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_18">
+                                    Staffordshire Bull Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_19">
+                                <a href="/owning-a-dog/dog-breeds/St-Bernard" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_19">
+                                    St Bernard Dog 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_20">
+                                <a href="/owning-a-dog/dog-breeds/Sussex-Spaniel" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_20">
+                                    Sussex Spaniel 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_17_itemLI_21">
+                                <a href="/owning-a-dog/dog-breeds/Swedish-Vallhund" id="content_0_contentleft_0_rptContent_rptBreeds_17_ancBreed_21">
+                                    Swedish Vallhund 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_18_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Tenterfield-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_18_ancBreed_0">
+                                    Tenterfield Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_18_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Tibetan-Mastiff" id="content_0_contentleft_0_rptContent_rptBreeds_18_ancBreed_1">
+                                    Tibetan Mastiff 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_18_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/Tibetan-Spaniel" id="content_0_contentleft_0_rptContent_rptBreeds_18_ancBreed_2">
+                                    Tibetan Spaniel 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_18_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Tibetan-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_18_ancBreed_3">
+                                    Tibetan Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_19_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Weimaraner" id="content_0_contentleft_0_rptContent_rptBreeds_19_ancBreed_0">
+                                    Weimaraner 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_19_itemLI_1">
+                                <a href="/owning-a-dog/dog-breeds/Welsh-Corgi-Cardigan" id="content_0_contentleft_0_rptContent_rptBreeds_19_ancBreed_1">
+                                    Welsh Corgi (Cardigan) 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_19_itemLI_2">
+                                <a href="/owning-a-dog/dog-breeds/Welsh-Corgi-Pembroke" id="content_0_contentleft_0_rptContent_rptBreeds_19_ancBreed_2">
+                                    Welsh Corgi (Pembroke) 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_19_itemLI_3">
+                                <a href="/owning-a-dog/dog-breeds/Welsh-Springer-Spaniel" id="content_0_contentleft_0_rptContent_rptBreeds_19_ancBreed_3">
+                                    Welsh Springer Spaniel 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_19_itemLI_4">
+                                <a href="/owning-a-dog/dog-breeds/Welsh-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_19_ancBreed_4">
+                                    Welsh Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_19_itemLI_5">
+                                <a href="/owning-a-dog/dog-breeds/West-Highland-White-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_19_ancBreed_5">
+                                    West Highland White Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_19_itemLI_6">
+                                <a href="/owning-a-dog/dog-breeds/Whippet" id="content_0_contentleft_0_rptContent_rptBreeds_19_ancBreed_6">
+                                    Whippet 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+                    <ul class="breedGrid">
+                    
+                            <li id="content_0_contentleft_0_rptContent_rptBreeds_20_itemLI_0">
+                                <a href="/owning-a-dog/dog-breeds/Yorkshire-Terrier" id="content_0_contentleft_0_rptContent_rptBreeds_20_ancBreed_0">
+                                    Yorkshire Terrier 
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+					<div class="bot"></div>
+                
+        </div>
+        
+    
+</div>
+</div>
+    </div>
+    <div class="cBot">
+    </div>
+</div>
+<div class="rightContent">
+    
+        <div id="content_0_contentright_0_rptMenu_divPromoPanel_0" class="promoPanelBAPO short">
+            <h2>Am I Ready?</h2>
+            <div class="divShortMenuAnchors">
+                <a href="/owning-a-dog/quiz" id="content_0_contentright_0_rptMenu_link_0" title="Am I Ready?">Take the Quiz</a>
+                <a id="content_0_contentright_0_rptMenu_subLink_0" class="promoPanelSubLink" style="display: none;"></a>
+            </div>
+            <img src="/-/media/PurinaAustralia/Images/Rich-Menu/rsn-dog-quiz.ashx" id="content_0_contentright_0_rptMenu_imgBAPO_0" alt="Am I Ready?" title="Am I Ready?" />
+        </div>
+    
+        <div id="content_0_contentright_0_rptMenu_divPromoPanel_1" class="promoPanelBAPO short">
+            <h2>Which breed?</h2>
+            <div class="divShortMenuAnchors">
+                <a href="/owning-a-dog/breed-selector" id="content_0_contentright_0_rptMenu_link_1" title="Which breed?">Find a breed</a>
+                <a href="/owning-a-dog/dog-breeds" id="content_0_contentright_0_rptMenu_subLink_1" class="promoPanelSubLink" style="display: block; margin-left: 19px; padding-top: 4px;" title="Breed Library">Breed Library</a>
+            </div>
+            <img src="/-/media/PurinaAustralia/Images/Rich-Menu/rsn-dog-breeds.ashx" id="content_0_contentright_0_rptMenu_imgBAPO_1" alt="Which breed?" title="Which breed?" />
+        </div>
+    
+        <div id="content_0_contentright_0_rptMenu_divPromoPanel_3" class="promoPanelBAPO short">
+            <h2>Choosing a dog</h2>
+            <div class="divShortMenuAnchors">
+                <a href="/owning-a-dog/choosing" id="content_0_contentright_0_rptMenu_link_3" title="Choosing a dog">Choose a dog</a>
+                <a id="content_0_contentright_0_rptMenu_subLink_3" class="promoPanelSubLink" style="display: none;"></a>
+            </div>
+            <img src="/-/media/PurinaAustralia/Images/Rich-Menu/rsn-dog-choosing.ashx" id="content_0_contentright_0_rptMenu_imgBAPO_3" alt="Choosing a dog" title="Choosing a dog" />
+        </div>
+    
+        <div id="content_0_contentright_0_rptMenu_divPromoPanel_4" class="promoPanelBAPO short">
+            <h2>What about adoption?</h2>
+            <div class="divShortMenuAnchors">
+                <a href="/owning-a-dog/adopt" id="content_0_contentright_0_rptMenu_link_4" title="What about adoption?">Learn more</a>
+                <a id="content_0_contentright_0_rptMenu_subLink_4" class="promoPanelSubLink" style="display: none;"></a>
+            </div>
+            <img src="/-/media/PurinaAustralia/Images/Rich-Menu/rsn-dog-adoption.ashx" id="content_0_contentright_0_rptMenu_imgBAPO_4" alt="What about adoption?" title="What about adoption?" />
+        </div>
+    
+<style type="text/css">
+        .promoPanelBAPO a.promoPanelSubLink { margin-top: 4px;}
+</style>
+<a href="http://www.petlife.com.au" class="promoPanel" target="_blank">
+    <div id="content_0_contentright_1_divPromoPanel" class="small">
+        <div class="divPromoText">
+            
+        </div>
+        <img src="/-/media/PurinaAustralia/Images/Promo-Panels/Static_Dynamic/Purina - PETLIFE -Website Tiles - Small_02.ashx?h=114&amp;la=en&amp;w=263&amp;hash=E382E4A62FEA4F7BB2BAD514D5B57C686B91E551" alt="Put a spring in your best friend&#39;s step with the PETLIFE range of innovative pet accessories and grooming products." width="263" height="114" />
+    </div>
+</a>
+
+</div>
+<div class="clear">
+</div>
+
+<div id="content" class="fullWidth">
+    <div id="contentLeftLower">
+        
+    </div>
+    <div id="contentRightLower">
+        
+    </div>    
+</div>
+
+		<div class="clear">
+		</div>
+	</div>
+	<div id="footer">
+		
+<div class="brands">
+    <div class="bWrapper">        
+            
+                    <a href="http://proplannutrition.com.au" id="footer_rptBrands_link_0" target="_blank"><img src="/-/media/PurinaAustralia/Images/Footer-Brands/proplan.ashx" id="footer_rptBrands_img_0" alt="ProPlan" /></a>
+                
+                    <a href="http://purinaone.com.au/" id="footer_rptBrands_link_1" target="_blank"><img src="/-/media/PurinaAustralia/Images/Footer-Brands/one.ashx" id="footer_rptBrands_img_1" alt="One" /></a>
+                
+                    <a href="https://fancyfeast.com.au/" id="footer_rptBrands_link_2" target="_blank"><img src="/-/media/PurinaAustralia/Images/Footer-Brands/fancyfeast.ashx" id="footer_rptBrands_img_2" alt="Fancy Feast" /></a>
+                
+                    <a href="http://www.supercoat.com.au/" id="footer_rptBrands_link_3" target="_blank"><img src="/-/media/PurinaAustralia/Images/Footer-Brands/supercoat.ashx" id="footer_rptBrands_img_3" alt="Super Coat" /></a>
+                
+                    <a href="http://www.beneful.com.au/" id="footer_rptBrands_link_4" target="_blank"><img src="/-/media/PurinaAustralia/Images/Footer-Brands/beneful.ashx" id="footer_rptBrands_img_4" alt="Beneful" /></a>
+                
+                    <a href="https://www.friskies.com.au/" id="footer_rptBrands_link_5" target="_blank"><img src="/-/media/PurinaAustralia/Images/Footer-Brands/friskies.ashx" id="footer_rptBrands_img_5" alt="Friskies" /></a>
+                
+                    <a href="/brands/lucky-dog" id="footer_rptBrands_link_6" target="_self"><img src="/-/media/PurinaAustralia/Images/Footer-Brands/luckydog.ashx" id="footer_rptBrands_img_6" alt="Lucky Dog" /></a>
+                
+                    <a href="/brands/bonnie" id="footer_rptBrands_link_7" target="_self"><img src="/-/media/PurinaAustralia/Images/Footer-Brands/bonnie.ashx" id="footer_rptBrands_img_7" alt="Bonnie" /></a>
+                
+                    <a href="http://www.petlife.com.au" id="footer_rptBrands_link_8" target="_blank"><img src="/-/media/PurinaAustralia/Images/Footer-Brands/PETLIFE Logo.ashx" id="footer_rptBrands_img_8" alt="Pet Life" /></a>
+                
+                    <a href="http://www.felixcat.com.au" id="footer_rptBrands_link_9" target="_blank"><img src="/-/media/PurinaAustralia/Images/Footer-Brands/Felix.ashx" id="footer_rptBrands_img_9" alt="Felix" /></a>
+                
+                    <a href="https://www.purinatotalcare.com.au/" id="footer_rptBrands_link_10" target="_blank"><img src="/-/media/PurinaAustralia/Images/Footer-Brands/totalcare-web.ashx" id="footer_rptBrands_img_10" alt="Total Care" /></a>
+                
+                    <a href="/brands/tidy-cats" id="footer_rptBrands_link_11" target="_self"><img src="/-/media/PurinaAustralia/Images/Footer-Brands/Footer-TidyCats.ashx" id="footer_rptBrands_img_11" alt="Tidy Cats" /></a>
+                        
+    </div>
+</div>
+<div class="links">    
+        
+                <div id="footer_rptMenu_divColumn_0" class="columns">
+
+
+                    <h3>Become a Pet Owner</h3>                    
+                    <ul>
+                        
+                                <li><a href="/owning-a-dog" id="footer_rptMenu_rptSubMenu_0_link_0">Guide to the Right Dog</a></li>
+                            
+                                <li><a href="/owning-a-cat" id="footer_rptMenu_rptSubMenu_0_link_1">Guide to the Right Cat</a></li>
+                            
+                    </ul>                    
+
+                </div>
+            
+                <div id="footer_rptMenu_divColumn_1" class="columns">
+
+
+                    <h3>Puppies & Kittens</h3>                    
+                    <ul>
+                        
+                                <li><a href="/puppies" id="footer_rptMenu_rptSubMenu_1_link_0">All about Puppies</a></li>
+                            
+                                <li><a href="/kittens" id="footer_rptMenu_rptSubMenu_1_link_1">All about Kittens</a></li>
+                            
+                    </ul>                    
+
+                </div>
+            
+                <div id="footer_rptMenu_divColumn_2" class="columns">
+
+
+                    <h3>Petcare</h3>                    
+                    <ul>
+                        
+                                <li><a href="/dogs" id="footer_rptMenu_rptSubMenu_2_link_0">Caring for Dogs</a></li>
+                            
+                                <li><a href="/cats" id="footer_rptMenu_rptSubMenu_2_link_1">Caring for Cats</a></li>
+                            
+                    </ul>                    
+
+                </div>
+            
+                <div id="footer_rptMenu_divColumn_3" class="columns">
+
+
+                    <h3>Feeding</h3>                    
+                    <ul>
+                        
+                                <li><a href="/dog-food" id="footer_rptMenu_rptSubMenu_3_link_0">What Makes the Right Dog Food?</a></li>
+                            
+                                <li><a href="/cat-food" id="footer_rptMenu_rptSubMenu_3_link_1">What Makes the Right Cat Food?</a></li>
+                            
+                    </ul>                    
+
+                </div>
+            
+                <div id="footer_rptMenu_divColumn_4" class="columns">
+
+                    <h3><a href="/promotions" id="footer_rptMenu_header_4">Promotions</a></h3>                    
+
+
+                </div>
+            
+                <div id="footer_rptMenu_divColumn_5" class="columns">
+
+                    <h3><a href="/brands" id="footer_rptMenu_header_5">Our Brands</a></h3>                    
+
+
+                </div>
+            
+                <div id="footer_rptMenu_divColumn_6" class="columns">
+
+                    <h3><a href="/about-us" id="footer_rptMenu_header_6">About us</a></h3>                    
+
+
+                </div>
+                
+    <div class="last">
+        <p>
+            All trademarks and other intellectual property on this site owned by Soci&#233;t&#233; des Produits Nestl&#233; S.A. Please view our updated Privacy Policy below.
+            <a href="http://www.nestle.com.au" title="Go to Nestle Australia" target="_blank" class="ancFooterNestle">Go to Nestle Australia</a>
+        </p>
+        <p class="qLinks">
+            <a href='https://www.purina.com.au/sign-up-email'>Sign Up</a>&nbsp;|&nbsp;<a href='/terms'>Terms of Use</a>&nbsp;|&nbsp;<a href='/privacy'>Privacy</a>&nbsp;|&nbsp;<a href='/accessibility'>Accessibility</a>&nbsp;|&nbsp;<a href='/sitemap'>Site Map</a>&nbsp;|&nbsp;<a href='/contact-us'>Contact Us</a>            
+			&nbsp;|&nbsp; <a href="/owning-a-dog/dog-breed-list?view=mobile" id="footer_ancViewSite">View mobile site</a>
+            
+        </p>
+    </div>
+</div>
+
+	</div>
+    
+    
+<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">
+    twttr.conversion.trackPid('l68sy', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l68sy&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l68sy&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" /></noscript>
+ 
+
+    
+<script src="/assets/corporatesite/scripts/lightbox.js" type="text/javascript"></script>
+<a href="#" class="openSignupBox pd" style="display: none;"></a>
+<div id="modal-content" class="signupContainer">
+    <div class="signupTop">
+	    <div id="modal-close"><a class="close pd" href="#"></a></div>
+	</div>
+
+<div id="signupControl1_ctl00">
+	
+
+        <div id="signupControl1_pnlSignupForm">
+		
+        
+        <div class="signupLeft">
+		    <h2 class="openModal">Paws for a second</h2>
+		    <h3>To sign-up to Purina for expert advice on all your pets' needs and exclusive promotions!</h3>
+	    </div>
+	    
+	    <div class="signupRight">
+		    <h3>Your Details</h3>
+		    <div class="row">
+			    <div class="col-2">
+				    <label for="signupControl1_txtFirstName" class="lFirst">First Name <span>*</span></label>
+				    <input name="signupControl1$txtFirstName" type="text" maxlength="50" id="signupControl1_txtFirstName" class="suFirstnName" />
+				    
+			    </div>
+			    <div class="col-2 right">
+				    <label for="signupControl1_txtLastName" class="lLast">Last Name <span>*</span></label>
+				    <input name="signupControl1$txtLastName" type="text" maxlength="50" id="signupControl1_txtLastName" class="suLastName" />
+				    
+			    </div>
+		    </div>
+		
+		    <div class="row">
+			    <div class="col-1">
+				    <label for="signupControl1_txtEmail" class="lEmail">Email Address <span>*</span></label>
+				    <input name="signupControl1$txtEmail" type="text" maxlength="100" id="signupControl1_txtEmail" class="suEmail" />
+				    
+			    </div>
+		    </div>
+
+		    <div class="row shr">
+			    <div class="hr"></div>
+		    </div>
+		    <h3>Your Pet's Details</h3>
+
+		    <div class="petContainer dogArea">
+
+		    </div>
+
+		    <div class="petContainer catArea">
+
+		    </div>
+
+		    <div class="hiddenDogCat">
+
+			    <div class="row dog">
+				    <div class="col-3 left">
+					    <label class="lDogName">Dog Name <span>*</span></label>
+					    <input name="signupControl1$txtDogName1" type="text" maxlength="50" id="signupControl1_txtDogName1" class="suDogName" />
+					    
+				    </div>
+				    <div class="col-3 centre">
+					    <label class="lDogAge">Age</label>
+					    <select name="signupControl1$ddlDogAge1" id="signupControl1_ddlDogAge1" class="suDogAge">
+			<option value="">Year(s)</option>
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+
+		</select>
+				    </div>
+				    <div class="col-3 right">
+					    <label class="lDogSize">Size of Dog <span>*</span></label>
+					    <select name="signupControl1$ddlSizeOfDog1" id="signupControl1_ddlSizeOfDog1" class="suDogSize">
+			<option value="">Select</option>
+			<option value="Toy">Toy</option>
+			<option value="Small">Small</option>
+			<option value="Medium">Medium</option>
+			<option value="Large">Large</option>
+			<option value="Giant">Giant</option>
+
+		</select>
+					    
+				    </div>
+				    <div class="removeContainer">
+					    <a href="#" class="pd remove">Remove</a>
+				    </div>
+			    </div>
+
+			    <div class="row dog">
+				    <div class="col-3 left">
+					    <label class="lDogName">Dog Name <span>*</span></label>
+					    <input name="signupControl1$txtDogName2" type="text" maxlength="50" id="signupControl1_txtDogName2" class="suDogName" />
+					   
+				    </div>
+				    <div class="col-3 centre">
+					    <label class="lDogAge">Age</label>
+					    <select name="signupControl1$ddlDogAge2" id="signupControl1_ddlDogAge2" class="suDogAge">
+			<option value="">Year(s)</option>
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+
+		</select>
+				    </div>
+				    <div class="col-3 right">
+					    <label class="lDogSize">Size of Dog <span>*</span></label>
+					    <select name="signupControl1$ddlSizeOfDog2" id="signupControl1_ddlSizeOfDog2" class="suDogSize">
+			<option value="">Select</option>
+			<option value="Toy">Toy</option>
+			<option value="Small">Small</option>
+			<option value="Medium">Medium</option>
+			<option value="Large">Large</option>
+			<option value="Giant">Giant</option>
+
+		</select>
+					    
+				    </div>
+				    <div class="removeContainer">
+					    <a href="#" class="pd remove">Remove</a>
+				    </div>
+			    </div>
+
+			    <div class="row dog">
+				    <div class="col-3 left">
+					    <label class="lDogName">Dog Name <span>*</span></label>
+					    <input name="signupControl1$txtDogName3" type="text" maxlength="50" id="signupControl1_txtDogName3" class="suDogName" />
+					    
+				    </div>
+				    <div class="col-3 centre">
+					    <label class="lDogAge">Age</label>
+					    <select name="signupControl1$ddlDogAge3" id="signupControl1_ddlDogAge3" class="suDogAge">
+			<option value="">Year(s)</option>
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+
+		</select>
+				    </div>
+				    <div class="col-3 right">
+					    <label class="lDogSize">Size of Dog <span>*</span></label>
+					    <select name="signupControl1$ddlSizeOfDog3" id="signupControl1_ddlSizeOfDog3" class="suDogSize">
+			<option value="">Select</option>
+			<option value="Toy">Toy</option>
+			<option value="Small">Small</option>
+			<option value="Medium">Medium</option>
+			<option value="Large">Large</option>
+			<option value="Giant">Giant</option>
+
+		</select>
+					    
+				    </div>
+				    <div class="removeContainer">
+					    <a href="#" class="pd remove">Remove</a>
+				    </div>
+			    </div>
+
+			    <div class="row cat">
+				    <div class="col-2 left">
+					    <label class="lCatName">Cat Name <span>*</span></label>
+					    <input name="signupControl1$txtCatName1" type="text" maxlength="50" id="signupControl1_txtCatName1" class="suCatName" />
+					    
+				    </div>
+				    <div class="col-2 right">
+					    <label class="lCatAge">Age</label>
+					    <select name="signupControl1$ddlCatAge1" id="signupControl1_ddlCatAge1" class="suCatYear">
+			<option value="">Year(s)</option>
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+
+		</select>
+				    </div>
+				    <div class="removeContainer">
+					    <a href="#" class="pd remove">Remove</a>
+				    </div>
+			    </div>
+
+			    <div class="row cat">
+				    <div class="col-2 left">
+					    <label class="lCatName">Cat Name <span>*</span></label>
+					    <input name="signupControl1$txtCatName2" type="text" maxlength="50" id="signupControl1_txtCatName2" class="suCatName" />
+					   
+				    </div>
+				    <div class="col-2 right">
+					    <label class="lCatAge">Age</label>
+					    <select name="signupControl1$ddlCatAge2" id="signupControl1_ddlCatAge2" class="suCatYear">
+			<option value="">Year(s)</option>
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+
+		</select>
+				    </div>
+				    <div class="removeContainer">
+					    <a href="#" class="pd remove">Remove</a>
+				    </div>
+			    </div>
+
+			    <div class="row cat">
+				    <div class="col-2 left">
+					    <label class="lCatName">Cat Name <span>*</span></label>
+					    <input name="signupControl1$txtCatName3" type="text" maxlength="50" id="signupControl1_txtCatName3" class="suCatName" />
+					    
+				    </div>
+				    <div class="col-2 right">
+					    <label class="lCatAge">Age</label>
+					    <select name="signupControl1$ddlCatAge3" id="signupControl1_ddlCatAge3" class="suCatYear">
+			<option value="">Year(s)</option>
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+
+		</select>
+				    </div>
+				    <div class="removeContainer">
+					    <a href="#" class="pd remove">Remove</a>
+				    </div>
+			    </div>
+
+		    </div>
+
+		    <div class="addDogCat">
+			    <a href="#" class="pd addDog">+ ADD DOG</a> <a href="#" class="pd addCat">+ ADD CAT</a>
+		    </div>
+
+		    <div class="tickBoxArea">
+			    
+				<p>Tick if you’re 15 years or over and would like to hear more about Nestlé Purina and its brands. Nestlé Purina may use your personal information in a number of ways for marketing purposes, including email newsletters and online targeted advertising. To see other ways in which Nestlé Purina may use personal details visit <a href="http://www.purina.com.au/privacy" class="blank">www.purina.com.au/privacy</a>.</p>				
+				
+				<div>
+				    <input id="signupControl1_chkPurina" type="checkbox" name="signupControl1$chkPurina" /><label for="signupControl1_chkPurina">Purina Petcare</label>
+			    </div>
+			    <div>
+				    <input id="signupControl1_chkNestle" type="checkbox" name="signupControl1$chkNestle" /><label for="signupControl1_chkNestle">Nestlé and its brands (including Purina Petcare)</label>
+			    </div>
+		    </div>
+
+	    </div>
+	    <div class="signupBottom">
+		    <div class="viewPrivacy">
+			    
+		    </div>
+		    <div class="submitContainer">
+			    <input type="submit" name="signupControl1$btnSignup" value="SUBMIT" id="signupControl1_btnSignup" />
+		    </div>
+	    </div>
+
+        <div id="signupControl1_updateProgress" style="display:none;">
+			
+				<div class="progress">
+					<img src="/assets/CorporateSite/images/base/loading_wheel_124x124.gif" />
+				</div>
+			
+		</div>
+
+        
+	</div>
+
+        
+
+
+</div>
+
+</div>
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("signupControl1_updateProgress"));
+});
+//]]>
+</script>
+</form>
+</div>
+
+<script type='text/javascript' src='https://c.la1-c1-lon.salesforceliveagent.com/content/g/js/37.0/deployment.js'></script>
+<script src="/assets/corporatesite/scripts/sfla.js?ds=20161006" type="text/javascript"></script>
+	<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '745819852136279']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=745819852136279&amp;ev=PixelInitialized" /></noscript>
+	<script src="https://brand-ecommerce-assets.fusepump.com/bootstraper/bootstraper.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		if($('.buynow button').length){
+			var lightboxes = {};
+			// Create the lightbox
+			$('.buynow button').each(function(idx,itm){
+				var prodId =$(this).data("prod-id");
+				lightboxes["item-"+prodId] = new fusepump.lightbox.buynow(prodId);
+				this.addEventListener("click", function(e) {
+					e.preventDefault();
+					var prodId =$(this).data("prod-id");
+					lightboxes["item-"+prodId].show(); // Show the lightbox
+				});
+			});
+		
+		}
+	</script>
+</body>
+</html>
