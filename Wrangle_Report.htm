@@ -16,15 +16,15 @@ xmlns="http://www.w3.org/TR/REC-html40">
   <o:Template>Normal</o:Template>
   <o:LastAuthor>Rahman Rahimi</o:LastAuthor>
   <o:Revision>2</o:Revision>
-  <o:TotalTime>26</o:TotalTime>
-  <o:Created>2018-04-03T06:18:00Z</o:Created>
-  <o:LastSaved>2018-04-03T06:18:00Z</o:LastSaved>
+  <o:TotalTime>93</o:TotalTime>
+  <o:Created>2018-04-04T00:34:00Z</o:Created>
+  <o:LastSaved>2018-04-04T00:34:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>216</o:Words>
-  <o:Characters>1234</o:Characters>
-  <o:Lines>10</o:Lines>
-  <o:Paragraphs>2</o:Paragraphs>
-  <o:CharactersWithSpaces>1448</o:CharactersWithSpaces>
+  <o:Words>601</o:Words>
+  <o:Characters>3428</o:Characters>
+  <o:Lines>28</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>4021</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -958,8 +958,16 @@ ul
 
 <div class=WordSection1>
 
+<p class=MsoNormal><span class=SpellE><b><i><span style='font-size:14.0pt;
+line-height:107%'>WeRateDogs</span></i></b></span><b><i><span style='font-size:
+14.0pt;line-height:107%'> Twitter Account Wrangling and analysing project:<o:p></o:p></span></i></b></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Our goal was
+to wrangle <span class=SpellE>WeRateDogs</span> Twitter data to create reliable
+analysis and visualizations. <span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>In this
-document I will be summarizing my wrangling steps from gathering data from
+document I will be summarizing my data wrangling steps from gathering data from
 several different sources to assessing data and finally to clean the datasets
 and store them in a master database (<span class=SpellE>db</span> format and
 CSV) format.<o:p></o:p></span></p>
@@ -984,7 +992,14 @@ mso-bidi-theme-font:minor-latin'><span style='mso-list:Ignore'>a.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
 dir=LTR></span><span style='font-size:14.0pt;line-height:107%'>Twitter_archive_enhanced.csv
 file. This file was provided by Udacity. This dataset contained data for about
-2300 entries which were twitter statuses.<o:p></o:p></span></p>
+2300 entries which were twitter statuses. Each tweet's text has been used to
+extract rating, dog name, and dog &quot;stage&quot; (i.e. doggo, <span
+class=SpellE>floof</span>(<span class=SpellE>er</span>), <span class=SpellE>pupper</span>,
+and <span class=SpellE>puppo</span>).&quot; Of the 5000+ tweets, we have tweets
+with ratings only (there are 2356)<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:35.45pt;mso-add-space:
+auto'><span style='font-size:14.0pt;line-height:107%'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-left:35.45pt;mso-add-space:
 auto;text-indent:-18.0pt;mso-list:l0 level2 lfo1'><![if !supportLists]><span
@@ -993,7 +1008,14 @@ mso-bidi-theme-font:minor-latin'><span style='mso-list:Ignore'>b.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
 dir=LTR></span><span style='font-size:14.0pt;line-height:107%'>Gathering extra
 data from Twitter API. We used our own consumer key and token to access the
-tweet statuses and download them. I called this dataset “<span class=SpellE>tweet_df</span>”.<o:p></o:p></span></p>
+tweet statuses and download them. because we have the <span class=SpellE>WeRateDogs</span>
+Twitter archive and specifically the tweet IDs within it, we can gather this
+data for all 5000+. We used <span class=SpellE>Tweepy</span> library to query
+Twitter's API to gather this valuable data. I called this dataset “<span
+class=SpellE>tweet_df</span>”. <o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:35.45pt;mso-add-space:
+auto'><span style='font-size:14.0pt;line-height:107%'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-left:35.45pt;mso-add-space:
 auto;text-indent:-18.0pt;mso-list:l0 level2 lfo1'><![if !supportLists]><span
@@ -1002,7 +1024,10 @@ mso-bidi-theme-font:minor-latin'><span style='mso-list:Ignore'>c.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
 dir=LTR></span><span style='font-size:14.0pt;line-height:107%'>Downloading
 programmatically a TSV file containing AI predictions based on the images of
-the dogs.<o:p></o:p></span></p>
+the dogs, i.e., what breed of dog (or <span class=GramE>other</span> object,
+animal, etc.) is present in each tweet according to a neural network. This file
+(<span class=SpellE>image_predictions.tsv</span>) is hosted on Udacity's
+servers and should be downloaded programmatically using the Requests library.<o:p></o:p></span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-left:35.45pt;mso-add-space:
 auto'><span style='font-size:14.0pt;line-height:107%'><o:p>&nbsp;</o:p></span></p>
@@ -1021,10 +1046,23 @@ mso-bidi-theme-font:minor-latin'><span style='mso-list:Ignore'>a.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
 dir=LTR></span><span style='font-size:14.0pt;line-height:107%'>I first visually
 assessed all datasets and found some issues within them. I have listed those
-issues in the Jupyter Notebook file. There are 2 types of issues with the dirty
-data that we had in this project:<o:p></o:p></span></p>
+issues here as well as in the Jupyter Notebook file. <o:p></o:p></span></p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-left:63.8pt;mso-add-space:
+<p class=MsoListParagraphCxSpMiddle style='margin-left:35.45pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level2 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-bidi-font-family:Calibri;
+mso-bidi-theme-font:minor-latin'><span style='mso-list:Ignore'>b.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+dir=LTR></span><span style='font-size:14.0pt;line-height:107%'>Second, we
+assessed the data programmatically, using great functions in Pandas. <o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:35.45pt;mso-add-space:
+auto'><span style='font-size:14.0pt;line-height:107%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>There are 2
+types of issues with the dirty data that we had in this project:<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:63.8pt;mso-add-space:
 auto;text-indent:-63.8pt;mso-text-indent-alt:-9.0pt;mso-list:l0 level3 lfo1'><![if !supportLists]><span
 style='font-size:14.0pt;line-height:107%;mso-bidi-font-family:Calibri;
 mso-bidi-theme-font:minor-latin'><span style='mso-list:Ignore'><span
@@ -1032,6 +1070,70 @@ style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 </span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span dir=LTR></span><span style='font-size:
 14.0pt;line-height:107%'>Tidiness issues<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span style='font-size:
+14.0pt;line-height:107%'>The denominator of “10” and the numerators could all
+be in one column<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span style='font-size:
+14.0pt;line-height:107%'>Dog stages need to be in one single column (doggo, <span
+class=SpellE>floof</span>(<span class=SpellE>er</span>), <span class=SpellE>pupper</span>,
+<span class=SpellE>puppo</span>)<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span style='font-size:
+14.0pt;line-height:107%'>It is not clear if the tweet is the original status or
+a retweet of something else, so we need to add a column for Retweet (Yes/No) or
+to remove the retweets from the dataset to be left with the original statuses.<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span style='font-size:
+14.0pt;line-height:107%'>The Columns titles are not descriptive enough (<span
+class=SpellE>img_num</span>, <span class=GramE>p(</span>1-3), p(1-3)_dog)<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span style='font-size:
+14.0pt;line-height:107%'>Number of records for this data frame is not the same
+as the archive. It has 2075 records while the other has 2356 records<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span style='font-size:
+14.0pt;line-height:107%'>Columns are not optimally arranged.<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span style='font-size:
+14.0pt;line-height:107%'>Should merge 2 Data Frames (<span class=SpellE>Tweet_DataFrame</span>
+and <span class=SpellE>Tweeter_archive_enhaced</span>)<o:p></o:p></span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-left:63.8pt;mso-add-space:
 auto;text-indent:-63.8pt;mso-text-indent-alt:-9.0pt;mso-list:l0 level3 lfo1'><![if !supportLists]><span
@@ -1042,22 +1144,101 @@ style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 </span></span></span><![endif]><span dir=LTR></span><span style='font-size:
 14.0pt;line-height:107%'>Quality issues<o:p></o:p></span></p>
 
-<p class=MsoListParagraphCxSpLast style='margin-left:35.45pt;mso-add-space:
-auto;text-indent:-18.0pt;mso-list:l0 level2 lfo1'><![if !supportLists]><span
-style='font-size:14.0pt;line-height:107%;mso-bidi-font-family:Calibri;
-mso-bidi-theme-font:minor-latin'><span style='mso-list:Ignore'>b.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
-dir=LTR></span><span style='font-size:14.0pt;line-height:107%'>Second, we
-assessed the data programmatically, using great functions in Pandas. <o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span style='font-size:
+14.0pt;line-height:107%'>“source” column is not clear, and we need to extract
+the exact source like iPhone, etc.<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span style='font-size:
+14.0pt;line-height:107%'>For “Dos Stage” and “Name”, for missing values,
+&quot;None&quot; is used rather than <span class=SpellE>NaN</span><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span style='font-size:
+14.0pt;line-height:107%'>Timestamp is not standard, so we could change it to a
+standard format of Date-time<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span style='font-size:
+14.0pt;line-height:107%'>A lot of Dog Stages are missing! So, not every dog has
+a “<span class=SpellE>dog_stage</span>” label.<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span style='font-size:
+14.0pt;line-height:107%'>All other ID fields also need to be converted into
+String like <span class=SpellE>in_reply_to_status_id</span><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span style='font-size:
+14.0pt;line-height:107%'>It appears that we have inconsistency in extracting
+the ratings (the nominators). Sometimes the digits after decimal point is
+extracted<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span style='font-size:
+14.0pt;line-height:107%'>Some of the photos are not dog (like the p1 says:
+hummingbird, p2: peacock, p3: eel)<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span style='font-size:
+14.0pt;line-height:107%'>full text contains some URL <span class=GramE>and also</span>
+rating which are irrelevant, need to be removed<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:144.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level4 lfo1'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:107%;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span class=SpellE><span
+style='font-size:14.0pt;line-height:107%'>Tweet_id</span></span><span
+style='font-size:14.0pt;line-height:107%'> is in Integer form, needs to be
+string<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>After a
-comprehensive assessment of the data, I created a list of 9 quality issues and
-8 tidiness issues in total. I have addressed all these issues in my Notebook
-following the steps of: (Issue, Define, Code, Test).<o:p></o:p></span></p>
+comprehensive assessment of the data, I created a list of 9 quality issues and 7
+tidiness issues in total. I have addressed all these issues in my Notebook
+following the steps of: (Issue, Define, Code, Test), that is to first clearly
+mention what the issue is, then define the method we have come up with to deal
+with the issue, after that we write a series of codes to resolve the problem
+and finally we use a few functions to test the results.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>I have also
-analysed the data after I cleaned the data frames and stored them in new
-databases (SQLite databases and CSV files).<o:p></o:p></span></p>
+analysed the data after I thoroughly cleaned the data frames and stored them in
+new databases (SQLite databases and CSV files). A short report on some of the
+analysis’s findings is also submitted.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><o:p>&nbsp;</o:p></span></p>
 
